@@ -1,0 +1,24 @@
+{
+  "name": "notifyme",
+  "version": "1.0.0",
+  "description": "Small project to manage notifications in the desktop",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fedeojeda95/NotifyMe.git"
+  },
+  "keywords": [
+    "github",
+    "notifications",
+    "desktop"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fedeojeda95/NotifyMe/issues"
+  },
+  "homepage": "https://github.com/fedeojeda95/NotifyMe#readme"
+}
