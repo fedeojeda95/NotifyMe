@@ -1,0 +1,1 @@
+export { fetchNotifications } from './notificationsController';

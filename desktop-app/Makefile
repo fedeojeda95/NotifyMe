@@ -1,4 +1,4 @@
 # Development 
 
-start-dev:
+start-desktop-dev:
 	./scripts/start-development.sh

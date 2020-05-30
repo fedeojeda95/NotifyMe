@@ -10,7 +10,7 @@ function isDev() {
 
 function createWindow() {
   // Create the browser window.
-  let window = new BrowserWindow({
+  const window = new BrowserWindow({
     width: WINDOW_WIDTH,
     height: WINDOW_HEIGHT,
     webPreferences: {
