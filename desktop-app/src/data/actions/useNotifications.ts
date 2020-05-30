@@ -1,12 +1,13 @@
 import React, { useContext } from 'react';
 
-import { notificationsContext, NotificationActionType } from 'data/state';
-import { useInterval } from 'hooks';
-import { fetchNotifications } from 'data/api';
-import { GithubNotification } from 'data/models';
+import { notificationsContext, NotificationActionType } from '../state';
+import { useInterval } from '../../hooks';
+import { fetchNotifications } from '../api';
+import { GithubNotification } from '../models';
 
 // Polling interval of 5 minutes
 const POLLING_INTERVAL = 5 * 60 * 1000;
+// const POLLING_INTERVAL = 1000;
 
 function useNotifications() {
   const [state, dispatch] = useContext(notificationsContext);
@@ -36,6 +37,7 @@ function useNotifications() {
   }
 
   useInterval(() => {
+    console.log('going to fetch!');
     startLoading();
     fetchNotifications().then(onSuccess).catch(onError);
   }, POLLING_INTERVAL);

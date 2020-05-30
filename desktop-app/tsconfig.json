@@ -9,7 +9,7 @@
     "jsx": "react",
     "allowJs": true,
     "moduleResolution": "node",
-    "baseUrl": "./src"
+    "baseUrl": "src"
   },
   "include": ["./src/**/**/*"]
 }

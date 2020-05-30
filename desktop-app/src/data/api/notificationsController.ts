@@ -1,5 +1,5 @@
 import { client } from './httpClient';
-import { GithubNotification } from 'data/models';
+import { GithubNotification } from '../models';
 
 export async function fetchNotifications(): Promise<GithubNotification[]> {
   const response = await client.activity.listNotificationsForAuthenticatedUser({

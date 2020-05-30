@@ -1,4 +1,4 @@
-import { GithubNotification } from 'data/models';
+import { GithubNotification } from '../models';
 
 enum NotificationStatus {
   Loading,
