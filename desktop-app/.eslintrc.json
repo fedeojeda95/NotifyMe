@@ -8,5 +8,8 @@
   "env": {
     "es2017": true
   },
+  "globals": {
+    "TWO": "writable"
+  },
   "extends": ["eslint:recommended", "plugin:prettier/recommended"]
 }

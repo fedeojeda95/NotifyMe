@@ -1,6 +1,8 @@
 import { RestEndpointMethodTypes } from '@octokit/rest';
 
-/* Type definition located in node_modules/@octokit/types/dist-types/generated/Endpoints.d.ts
+/* Type defined by Github's library
+
+It's located in node_modules/@octokit/types/dist-types/generated/Endpoints.d.ts
 
 export declare type ActivityListNotificationsForAuthenticatedUserResponseData = {
     id: string;

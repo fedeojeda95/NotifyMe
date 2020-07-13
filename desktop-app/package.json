@@ -6,7 +6,9 @@
   "scripts": {
     "start": "electron .",
     "start-dev": "electron . --dev",
+    "start-dev-mock": "MOCK=true electron . --dev",
     "run-dev-server": "webpack-dev-server -d --config ./webpack-config/dev.config.js",
+    "run-dev-server-mock": "webpack-dev-server -d --env.MOCK --config ./webpack-config/dev.config.js",
     "build-prod": "webpack --config ./webpack-config/prod.config.js",
     "build-dev": "webpack --config ./webpack-config/dev.config.js",
     "lint": "eslint ."
@@ -53,6 +55,7 @@
   "dependencies": {
     "@octokit/rest": "^17.9.2",
     "@types/react-router-dom": "^5.1.5",
+    "dayjs": "^1.8.28",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",

@@ -1,4 +1,5 @@
 import { GithubNotification } from '../models';
+import { Dayjs } from 'dayjs';
 
 enum NotificationStatus {
   Loading,
@@ -30,6 +31,7 @@ interface NotificationsState {
   notifications: GithubNotification[];
   status: NotificationStatus;
   error: string;
+  lastFetched: Dayjs | null;
 }
 
 export {

@@ -1,4 +1,4 @@
-const { app, BrowserWindow } = require('electron');
+const { app, BrowserWindow, shell } = require('electron');
 const process = require('process');
 
 const WINDOW_WIDTH = 800;
@@ -17,6 +17,12 @@ function createWindow() {
       nodeIntegration: true,
     },
   });
+
+  window.webContents.on('new-window', function (e, url) {
+    e.preventDefault();
+    shell.openExternal(url);
+  });
+
   return window;
 }
 

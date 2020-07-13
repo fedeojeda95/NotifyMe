@@ -1,3 +1,5 @@
+import dayjs from 'dayjs';
+
 import {
   NotificationStatus,
   NotificationActionType,
@@ -11,16 +13,38 @@ const notificationsInitialState: NotificationsState = {
   notifications: [],
   status: NotificationStatus.NotStarted,
   error: '',
+  lastFetched: null,
 };
+
+function getNewNotifications(data: NotificationsSavedData) {
+  const { notifications } = data;
+
+  return notifications.filter((notification) => {
+    const {
+      subject: { type },
+      reason,
+    } = notification;
+
+    const isPullRequest = type === 'PullRequest';
+    const isRequestForReview = reason === 'review_request';
+    return isPullRequest && isRequestForReview;
+  });
+}
 
 function onNotificationsSaved(state: NotificationsState, action: NotificationsAction): NotificationsState {
   const { data } = action;
-  const { notifications } = data as NotificationsSavedData;
+  const savedData = data as NotificationsSavedData;
+
+  const newNotifications = getNewNotifications(savedData);
+
+  const { notifications: oldNotifications } = state;
+  const notifications = [...newNotifications, ...oldNotifications];
 
   return {
-    ...state,
-    status: NotificationStatus.Succesful,
     notifications,
+    status: NotificationStatus.Succesful,
+    error: '',
+    lastFetched: dayjs(),
   };
 }
 
