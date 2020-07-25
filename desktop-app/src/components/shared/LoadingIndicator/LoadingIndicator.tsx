@@ -1,9 +1,13 @@
 import React, { memo } from 'react';
 import * as styles from './LoadingIndicator.treat';
 
-function Indicator() {
+interface IndicatorProps {
+  style: string;
+}
+
+function Indicator({ style }: IndicatorProps) {
   return (
-    <div className={styles.loadingIndicatorContainer}>
+    <div className={`${styles.loadingIndicatorContainer} ${style}`}>
       <div className={styles.firstPoint}></div>
       <div className={styles.secondPoint}></div>
       <div className={styles.thirdPoint}></div>

@@ -23,7 +23,7 @@ export declare type ActivityListNotificationsForAuthenticatedUserResponseData = 
             following_url: string;
             gists_url: string;
             starred_url: string;
-            subscriptions_url: string;
+            subscriptions_url: string; t
             organizations_url: string;
             repos_url: string;
             events_url: string;

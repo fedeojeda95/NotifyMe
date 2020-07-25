@@ -17,6 +17,19 @@ export const amount = style({
   margin: 0,
 });
 
-export const loadingContainer = style({});
+export const loadingContainer = style({
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  width: '100%',
+});
 
-export const loadingText = style({});
+export const loadingText = style({
+  width: '100%',
+  textAlign: 'center',
+});
+
+export const loadingIndicator = style({
+  width: '100%',
+  height: '30px',
+});

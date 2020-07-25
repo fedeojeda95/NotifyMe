@@ -8,7 +8,12 @@ interface ItemsProps {
 }
 
 function EmptyNotifications() {
-  return <p>No notifications yet!</p>;
+  return (
+    <div className={styles.emptyContainer}>
+      <h1 className={styles.emptyMessage}>No notifications yet!</h1>
+    </div>
+  );
+  return;
 }
 
 function Items({ notifications }: ItemsProps) {

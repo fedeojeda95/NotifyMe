@@ -15,7 +15,7 @@ function LoadingStatus() {
   return (
     <div className={styles.loadingContainer}>
       <p className={styles.loadingText}> Loading...</p>
-      <LoadingIndicator />
+      <LoadingIndicator style={styles.loadingIndicator} />
     </div>
   );
 }
