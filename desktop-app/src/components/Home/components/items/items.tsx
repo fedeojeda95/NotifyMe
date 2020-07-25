@@ -1,6 +1,7 @@
 import React from 'react';
 import { GithubNotification } from '../../../../data/models';
 import { NotificationItem } from './NotificationItem';
+import * as styles from './items.treat';
 
 interface ItemsProps {
   notifications: GithubNotification[];
@@ -20,7 +21,12 @@ function Items({ notifications }: ItemsProps) {
     <NotificationItem key={notification.id} notification={notification} />
   ));
 
-  return <>{items}</>;
+  return (
+    <div className={styles.container}>
+      <h1 className={styles.title}>Notifications</h1>
+      {items}
+    </div>
+  );
 }
 
 export { Items };

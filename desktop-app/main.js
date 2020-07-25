@@ -4,6 +4,8 @@ const process = require('process');
 const WINDOW_WIDTH = 800;
 const WINDOW_HEIGHT = 600;
 
+const MIN_WINDOW_WIDTH = 400;
+
 function isDev() {
   return process.argv[2] == '--dev';
 }
@@ -13,6 +15,7 @@ function createWindow() {
   const window = new BrowserWindow({
     width: WINDOW_WIDTH,
     height: WINDOW_HEIGHT,
+    minWidth: MIN_WINDOW_WIDTH,
     webPreferences: {
       nodeIntegration: true,
     },

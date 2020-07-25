@@ -16,7 +16,3 @@ export const amount = style({
   fontSize: 24,
   margin: 0,
 });
-
-export const loadingContainer = style({});
-
-export const loadingText = style({});

@@ -17,9 +17,26 @@ export const statusContainer = style({
 });
 
 export const infoContainer = style({
-  width: '25%',
+  width: '30%',
+  marginLeft: '10px',
+  '@media': {
+    'screen and (max-width: 450px)': {
+      display: 'none',
+    },
+  },
 });
 
 export const itemsContainer = style({
-  width: '75%',
+  width: '65%',
+  '@media': {
+    'screen and (max-width: 450px)': {
+      width: '100%',
+    },
+  },
+});
+
+export const divider = style({
+  marginRight: '25px',
+  marginTop: '25px',
+  marginBottom: '25px',
 });

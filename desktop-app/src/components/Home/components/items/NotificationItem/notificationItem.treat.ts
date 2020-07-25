@@ -1,10 +1,11 @@
 import { style } from 'treat';
 
 export const container = style({
-  height: '25vh',
+  height: '215px',
   display: 'flex',
   flexDirection: 'column',
-  margin: '15px',
+  marginBottom: '15px',
+  marginTop: '15px',
   borderRadius: '5px',
   borderStyle: 'solid',
   borderColor: 'grey',
@@ -30,11 +31,19 @@ export const actionsContainer = style({
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'space-between',
-  alignItems: 'center',
+  alignItems: 'flex-end',
+  marginRight: '5px',
+  marginTop: '5px',
 });
 
+export const goToPrLink = style({
+  marginBottom: '10px',
+});
+
+export const markAsReadButton = style({});
+
 export const title = style({
-  fontSize: 18,
+  fontSize: 22,
   fontWeight: 'bold',
 });
 

@@ -12,7 +12,7 @@ async function wait(seconds: number) {
 }
 
 export async function fetchNotifications(since: Dayjs | null): Promise<GithubNotification[]> {
-  await wait(800);
+  await wait(4000);
 
   baseId += 2;
 

@@ -21,23 +21,23 @@ function NotificationItem({ notification }: NotificationItemProps) {
   } = notification;
 
   const pullRequestUrl = buildPullRequestUrl(repositoryUrl, url);
-  const lastReadDate = dayjs(lastReadAt).format('HH:mm:ss - YYYY-MM-DD');
+  const lastReadDate = dayjs(lastReadAt).format('HH:mm - D, MMM');
 
   return (
     <div className={styles.container}>
       <div className={styles.titleContainer}>
         <p className={styles.title}> {title} </p>
         <div className={styles.actionsContainer}>
-          <a href={pullRequestUrl} target="_blank">
+          <a className={styles.goToPrLink} href={pullRequestUrl} target="_blank">
             Go to PR
           </a>
-          <input type="button" value="Mark as Read"></input>
+          <input className={styles.markAsReadButton} type="button" value="Mark as Read"></input>
         </div>
       </div>
       <div className={styles.infoContainer}>
         <p className={styles.infoName}> Repository </p>
         <p className={styles.infoContent}> {repositoryName} </p>
-        <p className={styles.infoName}> Created at: </p>
+        <p className={styles.infoName}> Created: </p>
         <p className={styles.infoContent}> {lastReadDate} </p>
       </div>
     </div>

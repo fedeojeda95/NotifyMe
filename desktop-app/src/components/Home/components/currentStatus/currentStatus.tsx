@@ -3,6 +3,7 @@ import { Dayjs } from 'dayjs';
 
 import * as styles from './currentStatus.treat';
 import { NotificationStatus } from '../../../../data/state';
+import { LoadingIndicator } from '../../../shared';
 
 interface CurrentStatusProps {
   status: NotificationStatus;
@@ -11,7 +12,12 @@ interface CurrentStatusProps {
 }
 
 function LoadingStatus() {
-  return <p>Syncing...</p>;
+  return (
+    <div className={styles.loadingContainer}>
+      <p className={styles.loadingText}> Loading...</p>
+      <LoadingIndicator />
+    </div>
+  );
 }
 
 function ErrorStatus({ error }: { error: string }) {
@@ -24,8 +30,13 @@ function ErrorStatus({ error }: { error: string }) {
 }
 
 function LastSynced({ lastFetched }: { lastFetched: Dayjs }) {
-  const lastFetchedFormatted = lastFetched.format('HH:mm:ss - YYYY-MM-DD');
-  return <p>Last synced: {lastFetchedFormatted}</p>;
+  const lastFetchedFormatted = lastFetched.format('HH:mm:ss');
+  return (
+    <div className={styles.container}>
+      <p className={styles.amount}> {lastFetchedFormatted} hs </p>
+      <p className={styles.name}> Last synced </p>
+    </div>
+  );
 }
 
 function CurrentStatus({ status, error, lastFetched }: CurrentStatusProps) {
