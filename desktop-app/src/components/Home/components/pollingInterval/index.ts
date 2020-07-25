@@ -1,0 +1,1 @@
+export { PollingInterval } from './pollingInterval';
